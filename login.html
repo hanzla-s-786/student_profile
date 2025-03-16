@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Arial&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/login.css">
+    <style>
+   
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="icon"><img src="./css/Assets/images/logo.png" alt="Logo" /></div>
+      <h2>Login</h2>
+      <p class="error-message"></p>
+      <form action="" method="POST" onsubmit="return validateForm()">
+        <div class="input-container">
+          <i class="fas fa-envelope icon-symbol"></i>
+          <input type="email" name="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="input-container">
+          <i class="fas fa-lock icon-symbol"></i>
+          <input type="password" name="password" id="password" placeholder="Password" required />
+          <i id="toggle-password" class="toggle-password fas fa-eye-slash" onclick="togglePasswordVisibility('password', this)"></i>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <div class="login-links">
+        <a href="create_acc.html">Don't have an account? Register</a>
+        <a href="forgot.html">Forgot Password?</a>
+      </div>
+      
+    </div>
+    <script src="./js/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  </body>
+</html>

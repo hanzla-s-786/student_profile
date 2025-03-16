@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js">
+    </script>
+    <style>
+
+
+    </style>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <!-- First Navbar (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-top fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img style="width: 40px;" src="./css/Assets/images/logo.png" alt="Logo">
+                GICCL LAHORE <span class="subtext">Online Admission</span>
+            </a>
+            <div onclick="window.location.href='profile.html';" style="cursor: pointer;"
+                class="ms-auto d-flex align-items-center">
+                <a class="nav-link">
+                    <i class="fas fa-user-circle  profile-icon"></i> <span> Welcome, Hanzla</a></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Navbar (Navigation Links) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bottom fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav2">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="main.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academic.html">Academic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="merit.html">Merit list</a></li>
+                    <li class="nav-item"><a class="nav-link" href="application.html">Application</a></li>
+                    <li class="nav-item"><a class="nav-link" href="apply.html">How to Apply</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item"><a class="nav-link" href="login.html"> <span> <i
+                                    class="fas fa-sign-out-alt "></i> Logout</span></a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Offered Programs --------->
+
+    <main class="hero-section mt-8">
+        <section class="offerings">
+            <h2>Offered Programs</h2>
+            <select class="form-select" id="programSelect" onchange="openForm()">
+                <option selected disabled>Choose an option</option>
+                <option value="1">FSC Pre Engineering</option>
+                <option value="2">FSC Pre Medical</option>
+                <option value="3">ICS Physics</option>
+                <option value="4">ICS Stats</option>
+                <option value="5">FA</option>
+                <option value="6">ICOM</option>
+                <option value="7">FA-IT</option>
+            </select>
+        </section>
+    </main>
+
+    <div class="modal fade" id="programFormModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div style="background-color: wheat;" class="modal-content">
+                <div style="border-bottom: 3px solid black; overflow: hidden;" class="modal-header">
+                    <h5 class="modal-title">Student Details - <span id="selectedProgram"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="studentForm">
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Student Name</label>
+                                <input type="text" class="form-control" placeholder="As per Matric Certificate"
+                                    required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Student CNIC</label>
+                                <input type="text" class="form-control" placeholder="e.g. 12345-6789012-3" required>
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <div class="col-md-4 text-center">
+                                    <div class="border border-secondary rounded d-flex justify-content-center align-items-center"
+                                        id="uploadBox"
+                                        style="width: 150px; height: 150px; margin: auto; cursor: pointer; background-color: #f8f9fa;"
+                                        onclick="document.getElementById('imageUpload').click()">
+                                        <span id="imageText">Click to Upload</span>
+                                    </div>
+                                    <input type="file" id="imageUpload" class="form-control d-none" accept="image/*"
+                                        onchange="previewImage(event)">
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-4"> 
+                                <label class="form-label">Home Address</label>
+                                <input type="text" class="form-control" placeholder="e.g. 123 Street Name, City" required>
+                            </div>
+                            
+                        </div>
+                        <div class="row mb-3">
+                            
+                            <div class="col-md-4">
+                                <label class="form-label">Father's Name</label>
+                                <input type="text" class="form-control" placeholder="Father's Full Name" required>
+                            </div>
+                            <div class="col-md-4">
+
+                                <label class="form-label">Father's CNIC</label>
+                                <input type="text" class="form-control" placeholder="e.g. 12345-6789012-3" required>
+                            </div>
+                        </div>
+                        <h5>Matric Education Details</h5>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Board Name</label>
+                                <input type="text" class="form-control" placeholder="e.g. BISE Lahore" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Major Subjects</label>
+                                <input type="text" class="form-control" placeholder="e.g. Physics, Chemistry, Biology"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Board Roll No</label>
+                                <input type="text" class="form-control" placeholder="e.g. 123456" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Year</label>
+                                <input type="text" class="form-control" placeholder="e.g. 2023" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Grade</label>
+                                <input type="text" class="form-control" placeholder="e.g. A+" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Total Marks / Obtained Marks</label>
+                                <input type="text" class="form-control" placeholder="e.g. 1100 / 950" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Select Shift</label>
+                                <select class="form-select" name="shift">
+                                    <option value="morning">Morning</option>
+                                    <option value="evening">Evening</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+
+
+                        <h5>Health Information</h5>
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                <label class="form-label">Age</label>
+                                <input type="number" class="form-control" placeholder="e.g. 18" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Weight (kg)</label>
+                                <input type="number" class="form-control" placeholder="e.g. 70" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Blood Group</label>
+                                <input type="text" class="form-control" placeholder="e.g. O+" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Any Disability</label>
+                                <select class="form-select" name="shift">
+                                    <option value="morning">No</option>
+                                    <option value="evening">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="submitBtn" style="background: #7a5227; color: #e1d9d1;" type="button"
+                            class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successPopup"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: wheat; padding: 30px; width: 90%; max-width: 400px; height: auto; text-align: center; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.5s ease-in-out;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <svg id="checkmark" width="100" height="100" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg"
+                style="stroke: #654321; stroke-width: 5; fill: none; margin-bottom: 10px; background: white; border-radius: 50%; padding: 5px;">
+                <circle cx="26" cy="26" r="25" fill="none" stroke="#654321" stroke-width="4" stroke-dasharray="157"
+                    stroke-dashoffset="157" style="animation: rotateCircle 1s ease-in-out forwards;"></circle>
+                <path d="M14 27 l8 8 l16 -16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="36"
+                    stroke-dashoffset="36" style="stroke: #654321; animation: drawTick 0.5s ease-in-out 1s forwards;">
+                </path>
+            </svg>
+            <h3 style="margin-top: 10px; font-size: 1.4rem; font-weight: bold; color: #000000;">Form Submitted
+                Successfully</h3>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="main-content">
+            <div class="left box quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="academic.html"><i class="fas fa-graduation-cap"></i> Academic</a></li>
+                    <li><a href="merit.html"><i class="fas fa-list-alt"></i>Merit list</a></li>
+                    <li><a href="application.html"><i class="fas fa-file-alt"></i>Application</a></li>
+                    <li><a href="apply.html"><i class="fas fa-file-signature"></i>Apply</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a></li>
+                </ul>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">H8F3+33M Library, St Nagar, Lahore, Punjab 54000</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+042-765432100</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">onlineadmission.@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Complaint Box</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="3" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <span class="credit">GICCL Online Admission <a href="#"></a> | </span>
+            <span class="far fa-copyright"></span><span> 2025 All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            let form = document.getElementById("studentForm");
+            let submitBtn = document.getElementById("submitBtn");
+
+            if (!form.checkValidity()) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            let confirmation = confirm("Are you sure to submit the form?");
+
+            if (confirmation) {
+                // Disable button initially
+                submitBtn.disabled = false;
+
+                // Change button text to indicate re-confirmation
+                submitBtn.innerText = "Click again to submit";
+
+                // Remove previous event listener to avoid duplication
+                submitBtn.replaceWith(submitBtn.cloneNode(true));
+                let newSubmitBtn = document.getElementById("submitBtn");
+
+                newSubmitBtn.addEventListener("click", function () {
+                    let modal = document.getElementById("programFormModal");
+                    let modalInstance = bootstrap.Modal.getInstance(modal);
+                    modalInstance.hide();
+
+                    setTimeout(() => {
+                        let popup = document.getElementById("successPopup");
+                        popup.style.display = "block";
+                        setTimeout(() => {
+                            popup.style.opacity = "1";
+                        }, 100);
+                        setTimeout(() => {
+                            popup.style.opacity = "0";
+                            setTimeout(() => {
+                                popup.style.display = "none";
+                                form.submit();
+                            }, 500);
+                        }, 5000);
+                    }, 500);
+                });
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the current page URL
+            let currentPage = window.location.pathname.split("/").pop();
+
+            // Get all nav links
+            let navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+            navLinks.forEach(link => {
+                let linkPage = link.getAttribute("href");
+
+                // Check if the current page matches the link
+                if (currentPage === linkPage) {
+                    link.classList.add("active"); // Add active class
+                } else {
+                    link.classList.remove("active"); // Remove active class
+                }
+            });
+        });
+
+        function previewImage(event) {
+        var input = event.target;
+        var reader = new FileReader();
+        
+        reader.onload = function() {
+            var uploadBox = document.getElementById('uploadBox');
+            var displayImg = document.getElementById('displayImage');
+            var imageText = document.getElementById('imageText');
+
+            // Set uploaded image as background
+            uploadBox.style.backgroundImage = 'url(' + reader.result + ')';
+            uploadBox.style.backgroundSize = 'cover';
+            uploadBox.style.backgroundPosition = 'center';
+            imageText.style.display = 'none'; // Hide text
+            
+            // Show uploaded image in form
+            displayImg.src = reader.result;
+            displayImg.classList.remove('d-none'); // Make visible
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+
+    </script>
+
+</body>
+
+</html>

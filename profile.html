@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+
+    <!-- First Navbar (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-top fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img style="width: 40px;" src="./css/Assets/images/logo.png" alt="Logo">
+                GICCL LAHORE <span class="subtext">Online Admission</span>
+            </a>
+            <div onclick="window.location.href='profile.html';" style="cursor: pointer;"
+                class="ms-auto d-flex align-items-center">
+                <a class="nav-link">
+                    <i class="fas fa-user-circle profile-icon"></i> <span>Welcome, Hanzla</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Navbar (Navigation Links) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bottom fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav2">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link " href="main.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academic.html">Academic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="merit.html">Merit list</a></li>
+                    <li class="nav-item"><a class="nav-link" href="application.html">Application</a></li>
+                    <li class="nav-item"><a class="nav-link" href="apply.html">How to Apply</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
+
+                </ul>
+
+            </div>
+
+            <a class="nav-link logout-btn" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-section mt-8 py-12 px-6 mb-9">
+
+        <div class="container mt-5">
+            <div class="card shadow-lg p-4 profile-container">
+
+                <div class="text-center">
+                    <img id="profilePreview" src="" class="profile-img" alt="Profile Image">
+                    <br>
+                    <input type="file" id="profileImage" class="d-none" accept="image/*" onchange="previewImage(event)">
+                    <button class="btn btn-primary btn-sm upload-btn mt-2 d-none" id="uploadBtn"
+                        onclick="document.getElementById('profileImage').click()">Upload Image</button>
+                </div>
+
+                <form id="profileForm" class="mt-4">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" disabled
+                                onclick="confirmPasswordEdit()">
+                            <span class="input-group-text" onclick="togglePassword()">👁️</span>
+                        </div>
+                    </div>
+
+                    <button style="background: #a96a3f; color: #fff; padding: 4px; border-radius: 6px;" id="editBtn"
+                        class=" w-100" type="button" onclick="toggleEdit()">Edit</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="main-content">
+            <div class="left box quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="academic.html"><i class="fas fa-graduation-cap"></i> Academic</a></li>
+                    <li><a href="merit.html"><i class="fas fa-list-alt"></i>Merit</a></li>
+                    <li><a href="application.html"><i class="fas fa-file-alt"></i>Application</a></li>
+                    <li><a href="apply.html"><i class="fas fa-file-signature"></i>Apply</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a></li>
+                </ul>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">H8F3+33M Library, St Nagar, Lahore, Punjab 54000</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+042-765432100</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">onlineadmission.@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Complaint Box</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="3" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <span class="credit">GICCL Online Admission <a href="#"></a> | </span>
+            <span class="far fa-copyright"></span><span> 2025 All rights reserved.</span>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/profile.js">
+        
+    </script>
+
+
+</body>
+
+</html>

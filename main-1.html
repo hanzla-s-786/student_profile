@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Admission System</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            style="width: 40px; position: relative; top: 8.5px"
+            src="./css/Assets/images/logo.png"
+            alt=""
+          />
+          GIGCCL LAHORE <span class="subtext">Online Admission</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                class="btn btn-primary mt-2 active"
+                data-bs-toggle="modal"
+                data-bs-target="#deadlineModal"
+                href="#dates"
+                >Dates & Deadlines</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#how-to-apply"
+                data-bs-toggle="modal"
+                data-bs-target="#howToApplyModal"
+                >How to Apply</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#instructions"
+                data-bs-toggle="modal"
+                data-bs-target="#instructionsModal"
+                >Important Instructions</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <h1>GIGCCL Online Admission System</h1>
+      <p>Apply for your desired program easily and securely.</p>
+      <a href="./create_acc.html" class="apply-now-btn">Apply Now</a>
+      <marquee
+        style="
+          margin-top: 40px;
+          margin-bottom: -57px;
+          font-weight: bold;
+          background: #e3ad6669;
+          padding: 10px 30px;
+          color: black;
+        "
+        behavior=""
+        direction=""
+      >
+        <span style="font-size: 1.5rem; color: beige"
+          >For Intermediate Programs : </span
+        ><i class="fas fa-laptop-code"><span>ICS</span> </i> <span></span
+        ><i class="fas fa-briefcase"><span>ICOM</span> </i>
+        <i class="fas fa-laptop"><span>FA IT</span> </i>
+        <i class="fas fa-chart-line"><span>ICS STATS</span> </i>
+        <i class="fas fa-flask"><span>FSC PRE ENGINEERING</span> </i>
+        <i class="fas fa-heartbeat"><span>PRE Medical</span> </i>
+       
+      </marquee>
+    </div>
+
+    <div class="container my-5">
+      <div class="row text-center search-container">
+        <!-- Search Challan and Merit List Button Section -->
+        <div class="col-md-6 col-12">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="challanSearch"
+              placeholder="Search Challan"
+            />
+            <span class="input-group-text"
+              ><i
+                class="fas fa-search"
+                onclick="searchChallan()"
+                style="cursor: pointer"
+              ></i
+            ></span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-12">
+          <div class="card p-3">
+            <button
+              type="button"
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#meritListModal"
+            >
+              View Merit List
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Merit List -->
+    <div
+      class="modal fade"
+      id="meritListModal"
+      tabindex="-1"
+      aria-labelledby="meritListModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="meritListModalLabel">Merit List</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Download the merit list for your program.</p>
+            <a href="path/to/meritlist.pdf" class="btn btn-primary" download
+              >Download Merit List</a
+            >
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <div class="row text-center">
+        <div class="col-md-3 col-12">
+          <div class="card p-3">
+            <i class="fas fa-calendar-alt fa-3x"></i>
+            <h5 class="mt-3">Dates & Deadlines</h5>
+            <button
+              type="button"
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#deadlineModal"
+            >
+              Click Here
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card p-3">
+            <i class="fas fa-file-alt fa-3x"></i>
+            <h5 class="mt-3">How to Apply</h5>
+            <a
+              href="#how-to-apply"
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#howToApplyModal"
+              >Click Here</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card p-3">
+            <i class="fas fa-book fa-3x"></i>
+            <h5 class="mt-3">E-Prospectus</h5>
+            <a
+              href="./Assets/PROSPECTUS 2022-24.pdf"
+              class="btn btn-primary mt-2"
+              download="E-Prospectus"
+              >Download</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card p-3">
+            <i class="fas fa-info-circle fa-3x"></i>
+            <h5 class="mt-3">Important Instructions</h5>
+            <a
+              href="#instructions"
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#instructionsModal"
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for How to Apply -->
+    <div
+      class="modal fade"
+      id="howToApplyModal"
+      tabindex="-1"
+      aria-labelledby="howToApplyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="howToApplyModalLabel">How to Apply</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
+              <table style="border: 1px solid black;" class="w-full border-collapse min-w-[300px]">
+                  <thead style="background-color: #4a3620; color: white;">
+                      <tr>
+                          <th style="border: 1px solid black;" class="px-4 py-2">Step</th>
+                          <th style="border: 1px solid black;" class="px-4 py-2">Description</th>
+                      </tr>
+                  </thead>
+                  <tbody class="text-gray-700">
+                      <tr style="background-color: #f1cfa4;">
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">🔹</span> Create an Account
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Register on the portal and verify
+                              your email or phone number.</td>
+                      </tr>
+                      <tr>
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">🔑</span> Login to Your Account
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Use your credentials to access the
+                              admission system.</td>
+                      </tr>
+                      <tr style="background-color: #f1cfa4;">
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">📚</span> Select Offered Programs
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Browse and choose from the available
+                              programs.</td>
+                      </tr>
+                      <tr>
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">📝</span> Fill Out the Application Form
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Enter personal details, academic
+                              information, and other required fields.</td>
+                      </tr>
+                      <tr style="background-color: #f1cfa4;">
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">📜</span> View Merit List
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">
+                              Check the merit list to see if your name is listed. If your name appears, proceed to the
+                              next step.
+                              <br>
+                              <a href="./css/Assets/merit.jpg" target="_blank"
+                                  class="text-blue-600 font-bold underline">Click here to view merit list</a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">🧾</span> Print Challan Form
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Generate and download the fee challan
+                              for payment.</td>
+                      </tr>
+                      <tr style="background-color: #f1cfa4;">
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">🏦</span> Pay at Any Bank
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Deposit the required fee at any
+                              designated bank.</td>
+                      </tr>
+                      <tr>
+                          <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                              <span class="text-blue-500 mr-2">📊</span> Track Application Status
+                          </td>
+                          <td style="border: 1px solid black;" class="px-4 py-2">Check the dashboard for application
+                              progress and updates.</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Application Deadline -->
+    <div
+      class="modal fade"
+      id="deadlineModal"
+      tabindex="-1"
+      aria-labelledby="deadlineModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deadlineModalLabel">
+              Application Deadline
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              The last date to apply for the online admission is
+              <strong>March 31, 2025</strong>.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Important Instructions -->
+    <div
+      class="modal fade"
+      id="instructionsModal"
+      tabindex="-1"
+      aria-labelledby="instructionsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="instructionsModalLabel">
+              Important Instructions
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Here are the important instructions for admission:</p>
+            <ul>
+              <li>Ensure that all the documents are in the correct format.</li>
+              <li>Verify your details before submitting the application.</li>
+              <li>The application fee is non-refundable.</li>
+              <li>Incomplete applications will not be processed.</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span class="credit">GICCL Online Admission <a href="#"></a> | </span>
+      <span class="far fa-copyright"></span
+      ><span> 2025 All rights reserved.</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index,js">
+      
+    </script>
+  </body>
+</html>

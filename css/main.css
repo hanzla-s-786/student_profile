@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1cfa4;
+    padding-top: 110px;
+    /* Space for double navbars */
+}
+
+/* First Navbar (Top) */
+.navbar-top {
+    background-color: #4a3620;
+    border-bottom: 1px solid #e1d9d1;
+
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    color: #f1cfa4 !important;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar-brand .subtext {
+    font-weight: 300;
+    font-size: 0.8rem;
+    display: block;
+    margin-left: 50px;
+    margin-top: -8px;
+}
+
+.profile-icon {
+    font-size: 1.2rem;
+}
+
+/* Second Navbar (Navigation) */
+.navbar-bottom {
+    background-color: #6e502a;
+    top: 77px;
+}
+
+.navbar-bottom .nav-link {
+    color: white !important;
+}
+
+.navbar-bottom .nav-link:hover {
+    color: #f1cfa4 !important;
+}
+.navbar-nav .nav-link.active {
+    color: #000000 !important; /* Change color */
+    border-radius: 5px; /* Optional: Rounded corners */
+    font-weight: bold; /* Make the text bold */
+}
+/* Hero Section */
+.hero-section {
+     background: linear-gradient(rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.863), #1b1917), url('Assets/images/giccl.png') no-repeat center center/cover;
+    height: 500px;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh;
+    margin-top: 23px;
+   
+}
+
+.hero-section .offerings {
+
+    color: wheat;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: #6e502a;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Form Submission  */
+
+.modal-dialog {
+    background-color: wheat;
+    max-width: 900px;
+    border-radius: 15px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.table {
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+.table th {
+    background-color: #a96a3f;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px;
+}
+
+.table td {
+    background-color: #ffc095;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px;
+}
+
+
+/* Form Submission End */
+
+/* Footer Start */
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+footer {
+
+    background: #7a5227;
+    color: #d9d9d9;
+    padding: 40px 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+}
+
+.box {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.box h2 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.quick-links ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+    margin-top: 28px;
+}
+
+.quick-links ul li {
+    flex: 1 1 calc(33.33% - 15px);
+}
+
+.quick-links ul li a {
+    color: #d9d9d9;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: start;
+}
+
+.quick-links ul li a:hover {
+    color: #fff;
+}
+
+.quick-links ul li a i {
+    margin-right: 12px;
+    margin-left: -20px;
+}
+
+.content p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.social a span,
+.center .content .fas {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.social a span:hover,
+.center .content .fas:hover {
+    background: #fff;
+    color: #4a3620;
+}
+
+.right form input,
+.right form textarea {
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #f1cfa4;
+    padding: 10px;
+    color: black;
+    border: 1px solid #222222;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.right form .btn button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #4a3620;
+    color: antiquewhite;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.right form .btn button:hover {
+    background: #694013;
+    color: white;
+}
+
+.bottom {
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1rem;
+    background: #a96a3f;
+    margin-bottom: -40px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Nav Media Query*/
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link .profile-icon {
+        font-size: 2rem;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+}
+
+/* Footer Media Query*/
+
+@media screen and (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .box {
+        width: 100%;
+        text-align: left;
+    }
+
+    .right form .btn button {
+        width: 100%;
+        background: #482601;
+        border-radius: 4px;
+        margin: 10px auto;
+    }
+
+    .bottom {
+        text-align: center;
+        padding: 15px;
+        font-size: 0.7rem;
+        background: #a96a3f;
+        margin-bottom: -40px;
+        border-radius: 0 0 10px 10px;
+    }
+}
+@media (max-width: 480px) {
+#successPopup {
+width: 100%;
+max-width: 300px;
+padding: 16px;
+
+}
+#checkmark {
+width: 50px;
+height: 50px;
+margin-bottom: 10px;
+}
+h3 {
+font-size: 0.596rem;
+
+}
+}
+@keyframes rotateCircle {
+from { stroke-dashoffset: 157; }
+to { stroke-dashoffset: 0; }
+}
+
+@keyframes drawTick {
+from { stroke-dashoffset: 36; }
+to { stroke-dashoffset: 0; }
+}

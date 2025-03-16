@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/create_acc.css">
+
+</head>
+<body>
+    <div class="form-container">
+        <div class="icon"><img src="./css/Assets/images/logo.png" alt="Logo"></div>
+        <h2>Create Account</h2>
+
+        <form action="" method="POST">
+            <div class="input-container">
+                <i class="fas fa-user icon-symbol"></i>
+                <input type="text" name="name" id="name" placeholder="Username" required>
+            </div>
+
+            <div class="input-container">
+                <i class="fas fa-envelope icon-symbol"></i>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-container">
+                <i class="fas fa-lock icon-symbol"></i>
+                <input type="password" name="password" id="password" placeholder="Password" required oninput="checkPasswordStrength()">
+                <i id="toggle-password" class="toggle-password fas fa-eye-slash" onclick="togglePasswordVisibility('password', this)"></i>
+                <div id="password-strength" class="password-strength">
+                    <div id="strength-bar"></div>
+                </div>
+            </div>
+
+            <button type="submit">Create Account</button>
+            <p><a href="login.html">Already have an account? Log in here</a></p>
+        </form>
+    </div>
+
+    <script src="./js/create_acc.js">
+       
+    </script>
+</body>
+</html>

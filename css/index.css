@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1cfa4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    position: fixed;
+    background-color: #6e502a;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    color: white !important;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand .subtext {
+    font-weight: 300;
+    font-size: 0.8rem;
+    display: block;
+    margin-left: 50px;
+    margin-top: -8px;
+  }
+  #navbarNav a:hover{
+text-decoration: none;
+  }
+  .hero-section {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.89),
+        rgba(0, 0, 0, 0.863),
+        #6e502a
+      ),
+      url("Assets/images/giccl.png") no-repeat center center/cover;
+    height: 500px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .hero-section p {
+    font-size: 1.15rem;
+    margin-top: 10px;
+  }
+
+  .apply-now-btn {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #6e502a;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    animation: blink 1.5s infinite;
+    text-decoration: none;
+  }
+
+  .apply-now-btn:hover {
+    background-color: #a96a3f;
+    text-decoration: none;
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  marquee {
+    font-size: 1 rem;
+  }
+
+  marquee i {
+    margin: 0px 20px 0px 20px;
+  }
+
+  marquee i span {
+    margin: 10px;
+  }
+
+  .input-group-text {
+    background-color: #6e502a;
+    border-color: #6e502a;
+  }
+
+  .form-control {
+    border-radius: 20px;
+  }
+
+  .search-container {
+    /* display: flex;
+        justify-content: center;
+        gap: 10px; */
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  }
+  .card i {
+    color: #6e502a;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    position: relative;
+    background-color: #6e502a;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  footer p {
+    margin-bottom: -10px;
+  }
+
+  .btn-primary {
+    background-color: #6e502a;
+    border-color: #6e502a;
+  }
+
+  .btn-primary:hover {
+    background-color: #a96a3f;
+    border-color: #a96a3f;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .hero-section p {
+      font-size: 1rem;
+    }
+
+    .card {
+      margin: 10px 0;
+    }
+
+    .col-md-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: #6e502a;
+  }
+
+  /* Hover effect on navbar links */
+  .nav-link:hover {
+    color: #f1cfa4 !important;
+    /* Change to any color you want on hover */
+    text-decoration: underline;
+    /* Optional: Add underline effect */
+  }

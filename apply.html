@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/apply.css">
+</head>
+
+<body>
+
+    <!-- First Navbar (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-top fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img style="width: 40px;" src="./css/Assets/images/logo.png" alt="Logo">
+                GICCL LAHORE <span class="subtext">Online Admission</span>
+            </a>
+            <div onclick="window.location.href='profile.html';" style="cursor: pointer;"
+                class="ms-auto d-flex align-items-center">
+                <a class="nav-link">
+                    <i class="fas fa-user-circle profile-icon"></i> <span>Welcome, Hanzla</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Second Navbar (Navigation Links) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-bottom fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav2">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link " href="main.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academic.html">Academic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="merit.html">Merit list</a></li>
+                    <li class="nav-item"><a class="nav-link" href="application.html">Application</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="apply.html">How to Apply</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item"><a class="nav-link" href="logout.html"> <span> <i
+                                    class="fas fa-sign-out-alt "></i> Logout</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="hero-section mt-8 py-12 px-6 mb-9">
+        <section class="apply-admission max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold text-blue-600 mb-6">How to Apply for Admission</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
+                <table style="border: 1px solid black;" class="w-full border-collapse min-w-[300px]">
+                    <thead style="background-color: #4a3620; color: white;">
+                        <tr>
+                            <th style="border: 1px solid black;" class="px-4 py-2">Step</th>
+                            <th style="border: 1px solid black;" class="px-4 py-2">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr style="background-color: #f1cfa4;">
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">🔹</span> Create an Account
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Register on the portal and verify
+                                your email or phone number.</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">🔑</span> Login to Your Account
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Use your credentials to access the
+                                admission system.</td>
+                        </tr>
+                        <tr style="background-color: #f1cfa4;">
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">📚</span> Select Offered Programs
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Browse and choose from the available
+                                programs.</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">📝</span> Fill Out the Application Form
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Enter personal details, academic
+                                information, and other required fields.</td>
+                        </tr>
+                        <tr style="background-color: #f1cfa4;">
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">📜</span> View Merit List
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">
+                                Check the merit list to see if your name is listed. If your name appears, proceed to the
+                                next step.
+                                <br>
+                                <a href="./Assets/merit.jpg" target="_blank"
+                                    class="text-blue-600 font-bold underline">Click here to view merit list</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">🧾</span> Print Challan Form
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Generate and download the fee challan
+                                for payment.</td>
+                        </tr>
+                        <tr style="background-color: #f1cfa4;">
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">🏦</span> Pay at Any Bank
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Deposit the required fee at any
+                                designated bank.</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;" class="px-4 py-2 font-semibold flex items-center">
+                                <span class="text-blue-500 mr-2">📊</span> Track Application Status
+                            </td>
+                            <td style="border: 1px solid black;" class="px-4 py-2">Check the dashboard for application
+                                progress and updates.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="main-content">
+            <div class="left box quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="academic.html"><i class="fas fa-graduation-cap"></i> Academic</a></li>
+                    <li><a href="merit.html"><i class="fas fa-list-alt"></i>Merit list</a></li>
+                    <li><a href="application.html"><i class="fas fa-file-alt"></i>Application</a></li>
+                    <li><a href="apply.html"><i class="fas fa-file-signature"></i>Apply</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a></li>
+
+                </ul>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">H8F3+33M Library, St Nagar, Lahore, Punjab 54000</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+042-765432100</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">onlineadmission.@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Complaint Box</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="3" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <span class="credit">GICCL Online Admission <a href="#"></a> | </span>
+            <span class="far fa-copyright"></span><span> 2025 All rights reserved.</span>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
